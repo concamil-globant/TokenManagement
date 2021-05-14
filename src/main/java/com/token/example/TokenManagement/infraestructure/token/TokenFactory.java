@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TokenFactory {
 
-  public String generateToken() {
+  public static String generateUUIDToken() {
     return UUID.randomUUID().toString();
   }
 
