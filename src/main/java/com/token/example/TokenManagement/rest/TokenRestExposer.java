@@ -21,7 +21,7 @@ public class TokenRestExposer {
   private TokenUseCase tokenUseCase;
 
 
-  @RequestMapping(value = "/get-token", method = RequestMethod.GET)
+  @RequestMapping(value = "/get-token", method = RequestMethod.POST)
   public ResponseEntity<GenerateTokenResponse.GetTokenResponse> generateToken(
       final @RequestBody GenerateTokenRequest.GetTokenRequest request) {
 
@@ -32,7 +32,7 @@ public class TokenRestExposer {
         HttpStatus.OK);
   }
 
-  @RequestMapping(value = "/validate-token", method = RequestMethod.GET)
+  @RequestMapping(value = "/validate-token", method = RequestMethod.POST)
   public ResponseEntity<ValidateTokenResponse.CheckTokenResponse> checkToken(
       final @RequestBody ValidateTokenRequest.CheckTokenRequest request) {
 
